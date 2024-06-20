@@ -45,10 +45,10 @@ public class MainApp {
          System.out.println(user + " " + user.getCar());
       }
 
-      System.out.println(userService.getUserByCar("Ford", 150));
+      System.out.println(userService.getVehicle("Ford", 150));
 
       try {
-         User notFoundUser = userService.getUserByCar("Moscvich", 412);
+         User notFoundUser = userService.getVehicle("Moscvich", 412);
       } catch (NoResultException e) {
          System.out.println("User not found");
       }
