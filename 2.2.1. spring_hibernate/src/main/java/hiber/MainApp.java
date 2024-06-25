@@ -27,12 +27,12 @@ public class MainApp {
       Car Toyota = new Car("Toyota", 340);
       Car Nissan = new Car("Nissan", 280);
 
-      userService.add(Alan.setCar(Vaz).setUser(Alan));
-      userService.add(Gama.setCar(Ford).setUser(Gama));
-      userService.add(Rama.setCar(Toyota).setUser(Rama));
-      userService.add(Sama.setCar(Nissan).setUser(Sama));
+      userService.addUser(Alan.setCar(Vaz).setUser(Alan));
+      userService.addUser(Gama.setCar(Ford).setUser(Gama));
+      userService.addUser(Rama.setCar(Toyota).setUser(Rama));
+      userService.addUser(Sama.setCar(Nissan).setUser(Sama));
 
-      List<User> users = userService.listUsers();
+      List<User> users = userService.listUser();
       for (User user : users) {
          System.out.println("Id = "+user.getId());
          System.out.println("First Name = "+user.getFirstName());
@@ -41,7 +41,7 @@ public class MainApp {
          System.out.println();
       }
 
-      for (User user : userService.listUsers()) {
+      for (User user : userService.listUser()) {
          System.out.println(user + " " + user.getCar());
       }
 
