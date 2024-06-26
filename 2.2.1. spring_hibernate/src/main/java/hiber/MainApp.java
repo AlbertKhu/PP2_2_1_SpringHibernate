@@ -32,7 +32,7 @@ public class MainApp {
       userService.addUser(Rama.setCar(Toyota).setUser(Rama));
       userService.addUser(Sama.setCar(Nissan).setUser(Sama));
 
-      List<User> users = userService.listUser();
+      List<User> users = userService.getUser();
       for (User user : users) {
          System.out.println("Id = "+user.getId());
          System.out.println("First Name = "+user.getFirstName());
@@ -41,7 +41,7 @@ public class MainApp {
          System.out.println();
       }
 
-      for (User user : userService.listUser()) {
+      for (User user : userService.getUser()) {
          System.out.println(user + " " + user.getCar());
       }
 
